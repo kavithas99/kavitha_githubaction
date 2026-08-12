@@ -42,7 +42,7 @@ test('patch booking', { tag: ['@regression', '@smoke'], annotation: { type: 'tes
     expect(jsonrespnse.lastname).toBe(createbooking.patchbody.lastname);
 })
 
-test('delete booking', { tag: ['@regression', '@smoke'], annotation: { type: 'test case', Description: 'Test to delete a booking' } }, async ({ request }) => {
+test('delete booking', { tag: ['@regression', '@smoke','@kavi'], annotation: { type: 'test case', Description: 'Test to delete a booking' } }, async ({ request }) => {
     apiUtil = new commonAPIutil(request);
     const token = await apiUtil.Authenticationtoken(request);
     console.log(token);
